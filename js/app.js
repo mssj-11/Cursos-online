@@ -109,7 +109,7 @@ function mostrarCarrito(){
             <td>${titulo}</td>
             <td>${precio}</td>
             <td>${cantidad}</td>
-            <td>
+            <td class="btn-eliminar">
                 <a href="#" class="borrar-curso" data-id="${id}"> X </a>
             </td>
         `;
@@ -127,3 +127,22 @@ function limpiarHTML(){
         contenedorCarrito.removeChild( contenedorCarrito.firstChild );
     }
 }
+
+
+
+/*=============== SHOW SCROLL UP ===============*/ 
+function scrollTop(){
+    const scrollTop = document.getElementById('scroll-up');
+    if(this.scrollY >= 460) scrollTop.classList.add('scroll-top'); 
+    else scrollTop.classList.remove('scroll-top')
+}
+window.addEventListener('scroll', scrollTop)
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+})

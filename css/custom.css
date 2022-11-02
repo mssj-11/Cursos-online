@@ -22,6 +22,7 @@ header {
 @media (min-width: 750px) {
   header {
     text-align: left;
+    
   }
 }
 .borrar-curso {
@@ -37,18 +38,17 @@ ul {
   list-style: none;
 }
 #hero {
-  width: 100%;
   height: 457px;
   background-image: url(../img/hero.jpg);
+  background-size: cover;/*
   background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
   transition: transform(-50%, -50%);
-  animation: animate 20s infinite;
+  animation: animate 20s infinite;*/
 }
 
 
-
+/*
 @keyframes animate {
   20%{
     width: 100%;
@@ -90,7 +90,9 @@ ul {
     transition: transform(-50%, -50%);
     overflow: hidden;
   }
-}
+}*/
+
+
 
 
 #encabezado {
@@ -199,12 +201,8 @@ ul {
   background-image: url(../img/icono3.png);
 }
 
-#lista-cursos .row {
-  margin-bottom: 20px;
-}
-.agregar-carrito {
-  margin: 10px 0;
-}
+#lista-cursos .row {  margin-bottom: 20px;  }
+.agregar-carrito {  margin: 10px 0; }
 .contador-precio{
     padding: 2px;
     background-color: #1eaedb;
@@ -232,9 +230,16 @@ ul {
     text-align: left;
   }
 }
-.info-card {
-  padding: 10px 20px;
+@media (max-width: 550px) {
+  #carrito{
+    width: 100%;
+    height: 100%;
+  }
+  .borrar-curso{  margin-left: -50px;  }
 }
+
+
+.info-card {  padding: 10px 20px; }
 
 .info-card p,
 .card h4 {
@@ -254,9 +259,50 @@ ul {
   margin-top: 40px;
   border-top: 1px solid #aaa;
   padding-top: 40px;
+  background: #741d51;
+  background: -moz-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #741d51 0%,
+    #e44e52 100%
+  );
+  background: linear-gradient(
+    to right,
+    #741d51 0%,
+    #e44e52 100%
+  );
 }
 .footer .menu a {
   display: block;
   margin-bottom: 10px;
   text-decoration: none;
+  color: #fff;
 }
+
+
+
+/*HEADER TOP*/
+.scrollup{
+  position: fixed;
+  bottom: -20%;
+  right: 1.75rem;
+  background-color: #1eaedb;
+  padding: .2rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.scrollup:hover{
+  background-color: #fff;
+  color: #1eaedb;
+}
+
+/* scroll-top UP */
+.scroll-top{  bottom: 1.5rem; }
