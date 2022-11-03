@@ -37,7 +37,7 @@ function agregarCurso( e ){
 
 
 
-function eliminarCurso( e ){
+function eliminarCurso(e){
     if( e.target.classList.contains('borrar-curso') ){
         const cursoId = e.target.getAttribute('data-id');
 
@@ -80,11 +80,9 @@ function leerDatosCurso( curso ){
     }
 
 
-
+/*
     const sumar = curso => curso.precio + curso.precio;
-
-
-
+*/
 
     mostrarCarrito();
 }
@@ -115,7 +113,7 @@ function mostrarCarrito(){
         `;
 
         //  Agregando los cursos al final de los previos(actuales)
-        contenedorCarrito.appendChild( row );
+        contenedorCarrito.appendChild(row);
     });
 }
 
